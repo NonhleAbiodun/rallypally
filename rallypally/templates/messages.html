@@ -1,0 +1,12 @@
+All messages for number {{ phone_number }} (Auto-refreshes every 5 seconds):
+<ul>
+{% for message in messages %}
+  <li>{{ message.datetime_received }}: {{ message.message }}</li>
+{% endfor %}
+</ul>
+
+<script>
+  setTimeout(()=>{
+    window.location.reload(1);
+  }, 5000);
+</script>
